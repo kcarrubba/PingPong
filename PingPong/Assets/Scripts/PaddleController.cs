@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
-
     Rigidbody2D pad;
     public float displacement;
     private bool isRightPaddle;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pad = GetComponent<Rigidbody2D>();
@@ -19,8 +17,7 @@ public class PaddleController : MonoBehaviour
             isRightPaddle = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Get paddle position
         Vector2 pos = pad.position;
@@ -53,6 +50,5 @@ public class PaddleController : MonoBehaviour
         }
 
         pad.MovePosition(pos);
-        
     }
 }

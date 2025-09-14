@@ -51,6 +51,9 @@ public class Ball : MonoBehaviour
         // Reset the position to center
         transform.position = Vector2.zero;
 
+        // Reset trail
+        GetComponent<TrailRenderer>().Clear();
+
         // Randomize starting direction: either (1,1) or (-1,1)
         int rand = Random.Range(0, 2); // 0 or 1
         if (rand == 0)
@@ -59,7 +62,7 @@ public class Ball : MonoBehaviour
             direction = new Vector2(-1f, 1f).normalized;
 
         // Relaunch after a short delay
-        Invoke(nameof(LaunchBall), 30f);
+        Invoke(nameof(LaunchBall), 3f);
     }
 
     void LaunchBall()
