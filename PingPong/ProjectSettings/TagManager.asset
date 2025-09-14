@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Right Paddle
   - Left Paddle
+  - Ball
+  - Logic
+  - Top Wall
+  - Bottom Wall
+  - Right Wall
+  - Left Wall
   layers:
   - Default
   - TransparentFX
