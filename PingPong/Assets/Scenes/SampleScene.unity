@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   displacement: 8
+  scoreManager: {fileID: 322777933}
 --- !u!61 &219981649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -618,6 +619,7 @@ MonoBehaviour:
   scoreText: {fileID: 1808306527}
   winText: {fileID: 126620385}
   ball: {fileID: 1225370973}
+  gameOver: 0
 --- !u!1 &362475133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   displacement: 8
+  scoreManager: {fileID: 322777933}
 --- !u!61 &1630011850
 BoxCollider2D:
   m_ObjectHideFlags: 0
