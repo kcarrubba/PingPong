@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     int p1 = 0;
     int p2 = 0;
     int winScore = 5;
+    public bool gameOver = false;
 
     public void AddScore(int player)
     {
@@ -30,11 +31,13 @@ public class ScoreManager : MonoBehaviour
         {
             winText.text = "Player 1 Wins!";
             ball.SetActive(false);
+            gameOver = true;
         }
         else if (p2 >= winScore)
         {
             winText.text = "Player 2 Wins!";
             ball.SetActive(false);
+            gameOver = true;
         }
     }
 }

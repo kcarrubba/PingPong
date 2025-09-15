@@ -5,6 +5,7 @@ public class PaddleController : MonoBehaviour
     Rigidbody2D pad;
     public float displacement;
     private bool isRightPaddle;
+    public ScoreManager scoreManager;
 
     void Start()
     {
@@ -19,6 +20,10 @@ public class PaddleController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // stop paddle movement if game over
+        if (scoreManager != null && scoreManager.gameOver)
+            return;
+
         // Get paddle position
         Vector2 pos = pad.position;
 
